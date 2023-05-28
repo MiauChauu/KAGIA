@@ -1,35 +1,35 @@
-	XAMPP/KAGIA
-	XAMPP/apache
-	XAMPP/apache_start.bat
-	XAMPP/apache_stop.bat
-	XAMPP/catalina_service.bat
-        XAMPP/catalina_start.bat
-        XAMPP/catalina_stop.bat
-        XAMPP/cgi-bin
-        XAMPP/contrib
-        XAMPP/install
-        XAMPP/licenses
-        XAMPP/locale
-        XAMPP/mysql_start.bat
-        XAMPP/mysql_stop.bat
-        XAMPP/passwords.txt
-        XAMPP/perl
-        XAMPP/php
-        XAMPP/phpMyAdmin
-        XAMPP/readme_de.txt
-        XAMPP/readme_en.txt
-        XAMPP/sendmail
-        XAMPP/setup_xampp.bat
-        XAMPP/skrypt.SQL
-        XAMPP/skrypt2.SQL
-        XAMPP/test_php.bat
-        XAMPP/tmp
-        XAMPP/tomcat
-        XAMPP/webdav
-        XAMPP/xampp-control.exe
-        XAMPP/xampp-control.ini
-        XAMPP/xampp-control.log
-        XAMPP/xampp
-        XAMPP/xampp_shell.bat
-        XAMPP/xampp_start.exe
-        XAMPP/xampp_stop.exe
+XAMPP/KAGIA
+XAMPP/apache
+XAMPP/apache_start.bat
+XAMPP/apache_stop.bat
+XAMPP/catalina_service.bat
+XAMPP/catalina_start.bat
+XAMPP/catalina_stop.bat
+XAMPP/cgi-bin
+XAMPP/contrib
+XAMPP/install
+XAMPP/licenses
+XAMPP/locale
+XAMPP/mysql_start.bat
+XAMPP/mysql_stop.bat
+XAMPP/passwords.txt
+XAMPP/perl
+XAMPP/php
+XAMPP/phpMyAdmin
+XAMPP/readme_de.txt
+XAMPP/readme_en.txt
+XAMPP/sendmail
+XAMPP/setup_xampp.bat
+XAMPP/skrypt.SQL
+XAMPP/skrypt2.SQL
+XAMPP/test_php.bat
+XAMPP/tmp
+XAMPP/tomcat
+XAMPP/webdav
+XAMPP/xampp-control.exe
+XAMPP/xampp-control.ini
+XAMPP/xampp-control.log
+XAMPP/xampp
+XAMPP/xampp_shell.bat
+XAMPP/xampp_start.exe
+XAMPP/xampp_stop.exe
