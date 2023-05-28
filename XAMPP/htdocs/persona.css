@@ -1,0 +1,109 @@
+@use postcss-cssnext;
+
+body
+{
+	background-color: #001216;
+	font-family: 'Roboto Slab', serif;
+	color: #404040;
+	margin:0 !important;
+	background-position: center-center;
+
+}
+
+.główne
+{
+	
+	
+	width: 450px;
+	padding: 150px;
+	margin-left: auto;
+	margin-right: auto; 
+	margin-top: 400px;
+	box-shadow: 0px 0px 15px 15px rgba(0,0,0,0.20);
+	
+	
+	border-radius: 10px;
+}
+
+#addingTable {
+	width: 50%;
+	margin-top: 50px;
+	margin-left: auto;
+	margin-right: auto;
+	border: 3px solid white;
+	padding: 5px;
+}
+
+.adding {
+	width:100%;
+	border: none;
+}
+
+#offers {
+	width: 50%;
+	margin-top: 50px;
+	margin-left: auto;
+	margin-right: auto;
+	border: 3px solid white;
+	padding: 5px;
+}
+
+#printing {
+	width:100%;
+	border: none;
+}
+
+table.adding td{
+	width:50%;
+	
+}
+
+table.adding td input {
+	width:100%;
+}
+
+input[type=text],
+input[type=password]
+{
+	width: 450px;
+	height: 50px;
+	background-color: white;
+	color: black;
+	border: 4px solid #white;
+	border-radius: 16px;
+	font-size: 22px;
+	padding: 10px;
+}
+
+input[type=submit]
+{
+	width: 150px;
+	height: 50px;
+	background-color: #033834;
+	font-size: 20px;
+
+	color: #ffffff;
+	padding 30px 30px;
+	border: none;
+	border-radius: 16px;
+	cursor: pointer;
+	letter-spacing: 1px;
+	box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.75);
+}
+input[type=submit]:hover
+{
+	background-color: #25837b;
+}
+
+.container 
+{
+	width:50%;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top: 50px;
+}	
+
+.profile_pic_div 
+{
+	
+}
