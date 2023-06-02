@@ -33,8 +33,9 @@ session_start();
 	<div class="wrapper">
 		<div class="nav">
 			<ol>
+				<li><a href="Strona_główna.php">Strona główna</a></li>
 				<li><a href="dodawanie_produktu.php">Dodanie produktu</a></li>
-				<li><a href="#">Ranking gier</a></li>
+				<li><a href="top10.php">Ranking gier</a></li>
 				<li><a href="dashboard.php">Edytuj profil</a></li>
                 <li><a href="#">Ustawienia</a></li>
                 <li><a href="response.php?action=logout" class="btn btn-default btn-sm">Wyloguj</a></li>

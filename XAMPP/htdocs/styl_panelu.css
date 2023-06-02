@@ -24,10 +24,10 @@ body
 { 
 	width: 100%;
 	padding: 10px 0;
-	background-color: #033321;
+	background-color: #75172E;
 	text-align: center;
-	border-top: 1px solid #033834;
-	border-bottom: 1px solid #033834;
+	border-top: 1px solid #75172E;
+	border-bottom: 1px solid #75172E;
 }
 
 .footer
@@ -55,6 +55,7 @@ ol
 	height: 35px;
 	line-height: 200%;
 	display: inline-block;
+	
 }
 
 ol a
@@ -73,12 +74,13 @@ ol > li
 
 ol > li:hover
 {
-	background-color: #f1fffe;
+	box-shadow: 0 5px 50px 0 #a14 inset, 0 5px 50px 0 #a14,
+	0 5px 50px 0 #a14 inset, 0 5px 50px 0 #a14;
 }
 
 ol > li:hover > a
 {
-	color: #451717;
+	color: #ffffff;
 }
 
 ol > li > ul

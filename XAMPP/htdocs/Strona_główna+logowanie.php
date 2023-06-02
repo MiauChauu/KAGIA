@@ -26,22 +26,35 @@ password:admin
 <div id="panel" style="display: none;">
 </div>
 
-<div id="error">
-</div>
+    <div class="glowne">
+		<form id="login-form" role="form" method="post" autocomplete="off">
+			<h2>Zaloguj się</h2>
+			<div class="inputBox">
+				<input type="text" name="username" id="username" required="required">
+				<span>Login</span>
+				<i></i>
+			</div>
+			<div class="inputBox">
+				<input type="password" name="password" id="password" required="required">
+				<span>Hasło</span>
+				<i></i>
+			</div>
+            <input type="submit" value="Zaloguj się" name="login-submit" id="login-submit" class="btn-primary">
+        </form>
+    </div>
 
-<div class="główne">
-<form id="login-form" role="form" method="post">
-
-	<input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Username" value=""  required>
-<!-- <br /><br /> -->
-
-	<input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Password">
-<!-- <br /><br /> -->
-
-	<input value="Zaloguj się" type="submit" name="login-submit" id="login-submit" tabindex="4" class="btn-primary"></input>
-	<div id="login-button"></div>
-</form>
-</div>
+    <div id="background-wrap">
+        <div class="bubble x1"></div>
+        <div class="bubble x2"></div>
+        <div class="bubble x3"></div>
+        <div class="bubble x4"></div>
+        <div class="bubble x5"></div>
+        <div class="bubble x6"></div>
+        <div class="bubble x7"></div>
+        <div class="bubble x8"></div>
+        <div class="bubble x9"></div>
+        <div class="bubble x10"></div>
+    </div>
 
 </body>
 

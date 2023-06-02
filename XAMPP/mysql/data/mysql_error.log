@@ -682,3 +682,22 @@ InnoDB: using atomic writes.
 2023-05-28 16:39:02 0 [Note] Plugin 'FEEDBACK' is disabled.
 2023-05-28 16:39:02 0 [Note] InnoDB: Loading buffer pool(s) from F:\XAMPP\mysql\data\ib_buffer_pool
 2023-05-28 16:39:02 0 [Note] Server socket created on IP: '::'.
+InnoDB: using atomic writes.
+2023-06-02 19:06:05 0 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions
+2023-06-02 19:06:05 0 [Note] InnoDB: Uses event mutexes
+2023-06-02 19:06:05 0 [Note] InnoDB: Compressed tables use zlib 1.2.11
+2023-06-02 19:06:05 0 [Note] InnoDB: Number of pools: 1
+2023-06-02 19:06:05 0 [Note] InnoDB: Using SSE2 crc32 instructions
+2023-06-02 19:06:05 0 [Note] InnoDB: Initializing buffer pool, total size = 16M, instances = 1, chunk size = 16M
+2023-06-02 19:06:05 0 [Note] InnoDB: Completed initialization of buffer pool
+2023-06-02 19:06:05 0 [Note] InnoDB: Starting crash recovery from checkpoint LSN=1879789
+2023-06-02 19:06:07 0 [Note] InnoDB: 128 out of 128 rollback segments are active.
+2023-06-02 19:06:07 0 [Note] InnoDB: Removed temporary tablespace data file: "ibtmp1"
+2023-06-02 19:06:07 0 [Note] InnoDB: Creating shared tablespace for temporary tables
+2023-06-02 19:06:07 0 [Note] InnoDB: Setting file '\K\KAGIA\XAMPP\mysql\data\ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2023-06-02 19:06:07 0 [Note] InnoDB: File '\K\KAGIA\XAMPP\mysql\data\ibtmp1' size is now 12 MB.
+2023-06-02 19:06:07 0 [Note] InnoDB: Waiting for purge to start
+2023-06-02 19:06:07 0 [Note] InnoDB: 10.4.11 started; log sequence number 1879798; transaction id 3062
+2023-06-02 19:06:07 0 [Note] InnoDB: Loading buffer pool(s) from D:\K\KAGIA\XAMPP\mysql\data\ib_buffer_pool
+2023-06-02 19:06:07 0 [Note] Plugin 'FEEDBACK' is disabled.
+2023-06-02 19:06:07 0 [Note] Server socket created on IP: '::'.
