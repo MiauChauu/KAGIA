@@ -1,0 +1,36 @@
+body{
+	background-color:black;
+}
+
+#h1{
+	background-color:lightblue;
+	font-size:44px;
+	width:100%;
+	height:25%;
+	text-align:center;
+	float: left;
+}
+input,label{
+	width:30%;
+	font-size:16px;
+}	
+#content{
+	width:100%;
+	background-color:blue;
+	text-align:center;
+	font-size:64px;
+}
+#footer{
+	width:100%;
+	
+	background-color:darkblue;
+	text-align:right;
+	font-size:24px;
+}
+h1{
+	font-family: Verdana;
+	color: white;
+}	
+a{
+	
+}
