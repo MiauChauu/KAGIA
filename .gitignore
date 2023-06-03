@@ -33,3 +33,7 @@ XAMPP/xampp
 XAMPP/xampp_shell.bat
 XAMPP/xampp_start.exe
 XAMPP/xampp_stop.exe
+XAMPP/mysql/data/ib_logfile0
+XAMPP/mysql/data/ibtmp1
+XAMPP/mysql/data/mysql.pid
+XAMPP/mysql/data/mysql_error.log
