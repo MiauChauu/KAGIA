@@ -37,7 +37,5 @@ XAMPP/mysql/data/ib_logfile0
 XAMPP/mysql/data/ibtmp1
 XAMPP/mysql/data/mysql.pid
 XAMPP/mysql/data/mysql_error.log
-XAMPP/mysql/data/ib_logfile0
-XAMPP/mysql/data/ibtmp1
-XAMPP/mysql/data/mysql.pid
-XAMPP/mysql/data/mysql_error.log
+XAMPP/mysql/data/mysql/db.MAI
+
