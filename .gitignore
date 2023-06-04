@@ -38,4 +38,5 @@ XAMPP/mysql/data/ibtmp1
 XAMPP/mysql/data/mysql.pid
 XAMPP/mysql/data/mysql_error.log
 XAMPP/mysql/data/mysql/db.MAI
+XAMPP/mysql/bin/my.ini
 
