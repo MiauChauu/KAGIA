@@ -1,5 +1,5 @@
 $(document).ready(function(){
-	/* handling form validation */
+	/* handling login form validation */
 	$("#login-form").validate({
 		rules: {
 			password: {
@@ -38,6 +38,64 @@ $(document).ready(function(){
 					$("#error").fadeIn(1000, function(){						
 						$("#error").html(response).show();
 					});
+				}
+			}
+		});
+		return false;
+	}
+
+	/* handling register form validation */
+
+	$("#register-form").validate({
+		rules: {
+			passwordcheck: {
+				required: true,
+				equalTo: "#password", // Ensure passwordcheck matches the value of the password field
+			},
+			password: {
+				required: true,
+				minlength: 8, // Minimum password length of 8 characters
+			},
+			username: {
+				required: true,
+			},
+		},
+		messages: {
+			passwordcheck:{
+				required: "Please confirm your password",
+				equalTo: "Passwords do not match",
+			   },
+			password:{
+			  required: "Please enter your password",
+			  minlength: "Password must be at least 8 characters long",
+			 },
+			username: "Please enter your username",
+		},
+		submitHandler: submitRegisterForm	
+	});	
+
+	/* Handling register functionality */
+	function submitRegisterForm() {		
+		var data = $("#register-form").serialize();
+		$.ajax({				
+			type : 'POST',
+			url  : 'response.php?action=register',
+			data : data,
+			beforeSend: function(){	
+				//$("#error").fadeOut();
+				//$("#register_button").html('<span class="glyphicon glyphicon-transfer"></span> &nbsp; sending ...');
+				console.log('before registering');
+				setTimeout(function() {
+					console.log("After wait");
+				  }, 5000); // Wait for 5 seconds (5000 milliseconds)
+			},
+			success : function(response){			
+				if($.trim(response) === "1"){
+					console.log('rrrr');									
+					$("#register-submit").html('Register in progress ...');
+					setTimeout(' window.location.href = "Strona_główna+logowanie.php"; ',2000);
+				} else {									
+					console.log("ERROR");
 				}
 			}
 		});

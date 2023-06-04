@@ -16,6 +16,9 @@ switch($action) {
  case 'logout':
 	$empCls->logout();
  break;
+ case 'register':
+	$empCls->register();
+ break;
  default:
  return;
 }
@@ -43,6 +46,25 @@ class Employee {
 			}
 		}
 	}
+
+	function register() {
+		if(isset($_POST['register-submit'])) {
+			$username = trim($_POST['username']);
+			$password = trim($_POST['password']);
+			$sql = "SELECT id_uzytkownika, username, password FROM logowanie WHERE username='$username'";
+			$resultset = mysqli_query($this->conn, $sql) or die("database error:". mysqli_error($this->conn));
+			$row = mysqli_fetch_assoc($resultset);
+			if($username == $row['username']){
+				echo "Oh no, this username already exist";
+			} else {
+				$sql2 = "INSERT INTO logowanie (username,password) VALUES ('$username','$password')";
+				$resultset = mysqli_query($this->conn, $sql2) or die("database error:". mysqli_error($this->conn));
+				//$row = mysqli_fetch_assoc($resultset);
+				echo "1";
+			}
+		}
+	}
+
 	function logout() {
 		unset($_SESSION['user_session']);
 		if(session_destroy()) {

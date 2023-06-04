@@ -43,6 +43,8 @@ password:admin
         </form>
     </div>
 
+    <h1>Not registered yet? <a href="Rejestracja.php">Rejestracja</a></h1>
+
     <div id="background-wrap">
         <div class="bubble x1"></div>
         <div class="bubble x2"></div>

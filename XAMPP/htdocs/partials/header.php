@@ -15,6 +15,6 @@ session_start();
 <script type="text/javascript" src="libs/common.js"></script>
 <link href="styl_panelu.css" rel="stylesheet" type="text/css" />
 <link href='http://fonts.googleapis.com/css?family=Lato:400,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'> <!tu chyba trzeba coś zmienić>
-<body>
+
 	   
 	
