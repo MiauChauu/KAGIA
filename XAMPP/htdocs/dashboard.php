@@ -128,6 +128,16 @@ include('newheader.php');
     
  </div>
     
+<html class="<?php echo $htmlClass; ?>">
+<a title=" Lights ON, OFF. "
+   href="javascript:void(0);" onclick="DualFlipClassSwitch('html' , 'dark' , 'white' , 'ColorMode');" 
+   style=" color: #111 ; padding: 0.4em 0.1em ; margin: 1px ; text-decoration: none ; float: right ; " 
+ >
+<button style="background: var(--button-background-color); border: none; cursor: pointer;">
+    Motyw
+</button>
+		
+		
 </div>
 <?php
 include('partials/footer.php')
