@@ -8,11 +8,152 @@ if (isset($_SESSION['user_session'])) {
     //echo "Session variable is not set.";
 	header("Location: Strona_główna+logowanie.php");
 	exit;
+	
+if (!isset($_SESSION['colorMode'])) {
+    $_SESSION['colorMode'] = 'dark'; //domyślny tryb kolorów
+}
+
+$htmlClass = $_SESSION['colorMode'];
 }
 ?>
 <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="libs/common.css">-->
+<script>
+window.onerror = null ;
+
+
+/*
+ Podczas ladowania strony zapamietuje zapisane klasy CSS z localStorage.
+  Dziala tylko dla znacznikow HTML, ktore sa juz zaladowane przed uruchomieniem skryptu
+  Optymalnie jest to znacznik HTML. Dziala tylko dla pierwszego znacznika danego typu
+*/
+
+document.addEventListener( 'DOMContentLoaded' , function() {
+
+  RememberClasses() ;
+
+});
+
+
+function RememberClasses() {
+
+ const ClassMemory = [
+      ["html" , "ColorMode"] ,
+      ["html" , "TextSize"] 
+   ] ;
+
+
+ for ( let [ Tag , MemoryName ] of ClassMemory ) {
+
+    let TagNotAlive = !(document.querySelector( Tag )) ;
+
+    let MemoryValue = window.localStorage.getItem( MemoryName ) ;
+
+    /*  W przypadku bledow logicznych pomijana jest jedna petla */
+
+    if ( !MemoryValue || TagNotAlive ) {
+       continue ;
+     }
+
+    /* W przeciwnym razie zapamietuje i ustawia klasy CSS. */
+     else {
+
+        document.querySelector( Tag ).classList.add( MemoryValue );
+      }
+  }
+
+}
+
+
+
+/* W trybie ciemnym, jesli ColorMode nie zostal ustawiony, a godzina jest miedzy 20:00 a 7:00 */
+
+document.addEventListener("DOMContentLoaded", AfterDark() , true ) ;
+
+function AfterDark() {
+
+ let hour = new Date().getHours() ;
+
+ let ColorWasSet = localStorage.getItem( "ColorMode" ) ;
+
+ let DarkWasSet = document.querySelector("html").classList.contains("dark") ;
+
+ if ( ( hour >= 20 || hour < 7 ) && !( ColorWasSet || DarkWasSet ) ) 
+  {
+      document.querySelector("html").classList.add( "dark" ) ;
+   }
+}
+
+
+
+/*   Przelacznik klasy CSS. Wlacz/Wylacz klase CSS + zapamietaj w localStorage. */
+
+
+function ClassSwitch( TagName, ClassName, MemoryName ) {
+
+
+ /* Uzywa Stale zmiennych, aby uniknac bledow logicznych */
+
+ const ClassWasActive = document.querySelector( TagName ).classList.contains( ClassName ) ;
+
+ const OldMemory = window.localStorage.getItem( MemoryName ) ;
+
+
+ /* Jesli klasa jest nowa i nie jest aktywna, usuwa mozliwa stara klase z pamieci.
+   Dokladne wyczyszczenie komorki pamieci.
+ */
+  
+    if ( !ClassWasActive && ( OldMemory !== ClassName ) ) {
+
+       if ( OldMemory ) {
+            document.querySelector( TagName ).classList.remove( OldMemory ) ;
+            window.localStorage.removeItem( MemoryName ) ;
+        }
+
+        document.querySelector( TagName ).classList.add( ClassName ) ;
+        window.localStorage.setItem( MemoryName , ClassName ) ;
+     }
+
+ /* W przeciwnym razie klasa CSS byla juz aktywna lub pamiec przelacznika nie byla czysta.
+   Przelaczamy dana klase. Usuwamy możliwa stara klase z pamieci.
+ */
+  
+     else {
+
+        document.querySelector( TagName ).classList.toggle( ClassName ) ;
+
+         if ( OldMemory ) {
+            document.querySelector( TagName ).classList.remove( OldMemory ) ;
+            window.localStorage.removeItem( MemoryName ) ;
+         }
+
+      }
+
+ return false ;
+
+}
+
+
+/* 
+Przelaczanie dwóch klas CSS. ustawia te lub inna klase CSS.
+   Przelacza lub zmienia klase CSS miedzy dwoma danymi opcjami.
+*/
+
+
+function DualFlipClassSwitch( TagName , Class1 , Class2 , MemoryName ) {
+
+ const ClassWasActive = document.querySelector( TagName ).classList.contains( Class1 ) ; 
+
+ if ( !ClassWasActive ) { ClassSwitch( TagName , Class1 , MemoryName ) ; }
+
+ else { ClassSwitch( TagName , Class2 , MemoryName ) ; }
+
+ return false ;
+
+}
+</script>
+
 <!DOCTYPE HTML>
 <html lang="pl">
 <head>
