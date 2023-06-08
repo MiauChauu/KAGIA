@@ -1,7 +1,9 @@
+<?php
+include('newheader.php');
+?>
 <html>
 	<head>
 	<?php include ('conn.php');
-		session_start();
 		?>
 		<title> top10 </title>
 		<link rel="stylesheet" href="stylemarcel.css" type="text/css">
