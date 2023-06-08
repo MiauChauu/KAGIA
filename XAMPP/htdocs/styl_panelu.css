@@ -1,7 +1,30 @@
+@use postcss-cssnext;
+:root{
+  --background-color: #001216;
+  --button-background-color: #75172E;
+  --button-text-color: #ffffff;
+  --background-color-footer: #222222;
+  --color-hover: #033834;
+}
+html.dark{
+  --background-color: #001216 !important;
+  --button-background-color: #75172E;
+  --button-text-color: #ffffff;
+  --background-color-footer: #222222;
+  --color-hover: #033834;
+}
+
+html.white {
+  --background-color: #F2A791 !important;
+  --button-background-color: #8C1C38;
+  --button-text-color: #000000;
+  --background-color-footer: #B54E4A;
+  --color-hover: #BF3913;
+}
 body
 {
-	background-color: #001216;
-	color: #ffffff;
+	background-color: var(--background-color) !important;
+	color: var(--button-text-color);
 	font-family: 'Lato', sans-serif;
 	font-size: 20px;
 	margin: 0 !important;
@@ -24,16 +47,16 @@ body
 { 
 	width: 100%;
 	padding: 10px 0;
-	background-color: #75172E;
+	background-color: var(--button-background-color);
 	text-align: center;
-	border-top: 1px solid #75172E;
-	border-bottom: 1px solid #75172E;
+	border-top: 1px solid var(--button-background-color);
+	border-bottom: 1px solid var(--button-background-color);
 }
 
 .footer
 {
 	text-align: center;
-	background-color: #222222;
+	background-color: var(--background-color-footer);
 	padding: 30px;
 }
 
@@ -60,7 +83,7 @@ ol
 
 ol a
 {
-	color: #ffffff;
+	color: var(--button-text-color);
 	text-decoration: none;
 	display: block;
 }
@@ -80,7 +103,7 @@ ol > li:hover
 
 ol > li:hover > a
 {
-	color: #ffffff;
+	color: var(--button-text-color);
 }
 
 ol > li > ul
@@ -99,7 +122,7 @@ ol > li:hover > ul
 
 ol > li > ul > li
 {
-	background-color:#ffffff;
+	background-color:var(--button-text-color);
 	position: relative;
 	z-index: 100;
 	border-top: 1px dashed #000;
@@ -107,10 +130,10 @@ ol > li > ul > li
 
 ol > li > ul > li:hover
 {
-	background-color: #033834;
+	background-color: var(--color-hover);
 }
 
 ol > li > ul > li:hover > a
 {
-	color: #033834;
+	color: var(--color-hover);
 }
