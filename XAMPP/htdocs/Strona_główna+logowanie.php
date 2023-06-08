@@ -44,6 +44,7 @@ password:admin
     </div>
 
     <h1>Not registered yet? <a href="Rejestracja.php">Rejestracja</a></h1>
+    <h1>Forgot <a href="Password_restore.php">Password</a> ?</h1>
 
     <div id="background-wrap">
         <div class="bubble x1"></div>

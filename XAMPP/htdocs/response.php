@@ -19,6 +19,12 @@ switch($action) {
  case 'register':
 	$empCls->register();
  break;
+ case 'restore':
+	$empCls->restore();
+ break;
+ case 'change':
+	$empCls->change();
+ break;
  default:
  return;
 }
@@ -51,17 +57,60 @@ class Employee {
 		if(isset($_POST['register-submit'])) {
 			$username = trim($_POST['username']);
 			$password = trim($_POST['password']);
+			$question = trim($_POST['question']);
+			$answer = trim($_POST['answer']);
 			$sql = "SELECT id_uzytkownika, username, password FROM logowanie WHERE username='$username'";
 			$resultset = mysqli_query($this->conn, $sql) or die("database error:". mysqli_error($this->conn));
 			$row = mysqli_fetch_assoc($resultset);
 			if($username == $row['username']){
 				echo "Oh no, this username already exist";
 			} else {
-				$sql2 = "INSERT INTO logowanie (username,password) VALUES ('$username','$password')";
+				$sql2 = "INSERT INTO logowanie (username,password,question_id,answer) VALUES ('$username','$password','$question','$answer')";
 				$resultset = mysqli_query($this->conn, $sql2) or die("database error:". mysqli_error($this->conn));
 				//$row = mysqli_fetch_assoc($resultset);
 				echo "1";
 			}
+		}
+	}
+
+	function restore() {
+		if(isset($_POST['restore-submit'])) {
+			if(trim($_POST['usercheck']=="0")){
+				$usercheck= trim($_POST['usercheck']);
+				$username = trim($_POST['username']);
+				$sql = "SELECT id_uzytkownika, username, password, question_id FROM logowanie INNER JOIN pytania ON logowanie.question_id=pytania.id WHERE username='$username'";
+				$resultset = mysqli_query($this->conn, $sql) or die("database error:". mysqli_error($this->conn));
+				$row = mysqli_fetch_assoc($resultset);
+				$question = $row['question_id'];
+				if(mysqli_num_rows($resultset)>0){
+					echo "$question";
+				} else {
+					echo "error1";
+				}
+			} else if(trim($_POST['usercheck']=="1")){
+				$username = trim($_POST['username']);
+				$answer = trim($_POST['useranswer']);
+				$sql = "SELECT id_uzytkownika, username, password, answer FROM logowanie WHERE username='$username'";
+				$resultset = mysqli_query($this->conn, $sql) or die("database error:". mysqli_error($this->conn));
+				$row = mysqli_fetch_assoc($resultset);
+				$goodanswer = $row['answer'];
+				if($goodanswer===$answer){
+					echo "success";
+				} else {
+					echo "error2, $goodanswer";
+				}
+			}
+		}
+	}
+
+	function change() {
+		if(isset($_POST['change-submit'])) {
+			$username = trim($_POST['usernamecheck']);
+			$password1 = trim($_POST['password1']);
+			$password2 = trim($_POST['password2']);
+			$sql = "UPDATE logowanie SET password = '$password1' WHERE username = '$username'";
+			$resultset = mysqli_query($this->conn, $sql) or die("database error:". mysqli_error($this->conn));
+			echo "$resultset";
 		}
 	}
 

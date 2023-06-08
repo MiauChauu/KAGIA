@@ -22,7 +22,7 @@ session_start();
 
 <div id="panel" style="display: none;">
 </div>
-
+<!--Rejestracja-->
     <div class="glowne">
 		<form id="register-form" role="form" method="post" autocomplete="off">
 			<h2>Rejestracja</h2>
@@ -39,6 +39,20 @@ session_start();
             <div class="inputBox">
 				<input type="password" name="passwordcheck" id="passwordcheck" required="required">
 				<span>Powtórz Hasło</span>
+				<i></i>
+			</div>
+            <div class="inputBox">
+				<select name="question" id="question" required="required">
+                    <option value="1">Jaki jest twój ulubiony kolor?</option>
+                    <option value="2" selected>Jakie jest imię twojego pierwszego zwierzaka?</option>
+                    <option value="3">W jakim mieście urodził się twój ojciec?</option>
+                    <option value="4">Jaki jest twój ulubiony film?</option>
+				<span>Pytanie Pomocnicze Przy Odzyskiwaniu Hasła</span>
+				<i></i>
+			</div>
+            <div class="inputBox">
+				<input type="text" name="answer" id="answer" required="required">
+				<span>Odpowiedź Do Pytania Pomocniczego</span>
 				<i></i>
 			</div>
             <input type="submit" value="Zarejestruj się" name="register-submit" id="register-submit" class="btn-primary">
