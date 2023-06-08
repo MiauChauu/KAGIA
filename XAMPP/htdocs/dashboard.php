@@ -127,6 +127,7 @@ include('newheader.php');
     
     
  </div>
+<div id="google_translate_element"></div>		
     
 <html class="<?php echo $htmlClass; ?>">
 <a title=" Lights ON, OFF. "

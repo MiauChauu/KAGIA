@@ -176,6 +176,22 @@ function DualFlipClassSwitch( TagName , Class1 , Class2 , MemoryName ) {
 	-->
 	<script type="text/javascript" charset="utf8" src="libs/get_p_pic.js"></script>
 	<link href="css/fontello.css" rel="stylesheet" type="text/css" /> <!--sprawdzić co to-->
+
+	
+<!--odwołanie się do google translate-->	
+		    <meta name="google" content="notranslate">
+    <script type="text/javascript">
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement({pageLanguage: 'pl', includedLanguages: 'en,pl', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+    }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+	<!--próba ukrycia widgeta ale nie wiem dlaczego nie chce działać poprawnie-->
+    <style>
+        .google_translate_element {
+            display: none;
+        }
+    </style>
 	
 </head>
 
@@ -199,7 +215,22 @@ function DualFlipClassSwitch( TagName , Class1 , Class2 , MemoryName ) {
 		
 		</div>
 		
-
+<!--Skrypt do tłumaczenia strony-->
+		<script>
+    function translatePage(language) {
+        var google_translate_element = document.getElementById('google_translate_element');
+        var select = google_translate_element.getElementsByTagName('select')[0];
+        for(var i=0; i < select.options.length; i++){
+            if(select.options[i].value == language){
+                select.selectedIndex = i;
+                var event = document.createEvent('HTMLEvents');
+                event.initEvent('change', true, false);
+                select.dispatchEvent(event);
+                break;
+            }
+        }
+    }
+    </script>
 		
 
 	<!--odniesienie do pliku jquery z zewnątrz, potrzebny do tego poniżej-->
