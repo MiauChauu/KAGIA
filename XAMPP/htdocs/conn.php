@@ -1,6 +1,6 @@
 <?php
 $dbhost="localhost";
-$dbname="projekt";
+$dbname="project";
 $dbuser="root";
 $dbpass="root";
 $connect=mysqli_connect($dbhost,$dbuser,$dbpass,$dbname);
