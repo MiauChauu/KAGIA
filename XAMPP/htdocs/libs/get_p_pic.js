@@ -28,7 +28,9 @@ function getImg() {
 			},
 			success : function(response){			
 				console.log(response);
-				$(document.body).css("backgroundColor",response);
+				//$(document.body).css("backgroundColor",response);
+				document.body.style.backgroundColor = response;
+				
 				//setTimeout(' window.location.href = "dashboard.php"; ',2000);
 			
 			}

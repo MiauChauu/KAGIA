@@ -25,6 +25,9 @@ switch($action) {
  case 'change':
 	$empCls->change();
  break;
+ case 'purchase':
+	$empCls->purchase();
+ break;
  default:
  return;
 }
@@ -111,6 +114,19 @@ class Employee {
 			$sql = "UPDATE logowanie SET password = '$password1' WHERE username = '$username'";
 			$resultset = mysqli_query($this->conn, $sql) or die("database error:". mysqli_error($this->conn));
 			echo "$resultset";
+		}
+	}
+
+	function purchase() {
+		if(isset($_POST['purchase-submit'])) {
+			$offer_id = trim($_POST['offer_id']);
+			$sql = "SELECT klucz FROM oferty"; //WHERE id_oferty = '$offer_id'";
+			$resultset = mysqli_query($this->conn, $sql) or die("database error:". mysqli_error($this->conn));
+			$row = mysqli_fetch_assoc($resultset);
+			$key = $row['klucz'];
+			//$sql2 = "DELETE FROM oferty WHERE id_oferty = '$offer_id'";
+			//$resultset2 = mysqli_query($this->conn, $sql2) or die("database error:". mysqli_error($this->conn));
+			echo "$key";
 		}
 	}
 

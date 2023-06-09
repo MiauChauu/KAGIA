@@ -230,4 +230,62 @@ $(document).ready(function(){
 		});
 		return false;
 	}
+
+	/* handling purchase form validation */
+	$("#purchase-form").validate({
+		rules: {
+			cardNumber: {
+				required: true,
+			},
+			expiryDate: {
+				required: true,
+			},
+			cvv: {
+				required: true,
+			},
+		},
+		messages: {
+			cardNumber:{
+				required: "Please enter your card number"
+			},
+			expiryDate: {
+				required: "Please enter expiry date of your card"
+			},
+			cvv: {
+				required: "Please enter cvv number"
+			},
+
+		},
+		submitHandler: submitPurchaseForm	
+	});	
+
+	/* Handling purchase functionality */
+	function submitPurchaseForm() {		
+		var data = $("#purchase-form").serialize();
+		$.ajax({				
+			type : 'POST',
+			url  : 'response.php?action=purchase',
+			data : data,
+			beforeSend: function(){	
+				//$("#error").fadeOut();
+				//$("#login_button").html('<span class="glyphicon glyphicon-transfer"></span> &nbsp; sending ...');
+				console.log('before');
+				//console.log(typeof($("#offer_id").val()));
+			},
+			success : function(response){			
+				if($.trim(response) === "1"){
+					console.log('dddd');									
+					$("#purchase-submit").html('Paying ...');
+					//setTimeout(' window.location.href = "p_użytkownika.php"; ',2000);
+				} else {									
+					console.log(response);
+					//$("#purchase-submit").html('Paying ...');
+					$("#purchase-div").css('display', 'block');
+					console.log($("#keyField").val());
+					$("#keyField").val(response);
+				}
+			}
+		});
+		return false;
+	}
 });

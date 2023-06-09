@@ -3,7 +3,6 @@
 $(document).ready(function(){
 	getImg();
 	getBgImg();
-	//alert("fugma");
 	//Jeżeli chcesz to wprowadz tu więcej linków do obrazków i ich alty ale musisz też dodać odpowiednią ilość pustych kolumn puste kolumny w tabeli w dashboard
 	var picturestable=["https://i.imgur.com/yalihR1.png","https://i.imgur.com/KNpRCnN.png","https://i.imgur.com/ensThzk.png","https://i.imgur.com/bukpRNX.png","https://i.imgur.com/0P8YDaP.png","https://cdn.shopify.com/s/files/1/2104/4963/articles/Staff_Template.png?v=1680660921&width=1440","Shinya","Yusuke","Tae","Sae","Sojiro","Temp"];
 	//var backgroundstable=["#C49D43","#934ECF","#4EA8CF","#001216","#00FF00"]; //Deprecated
@@ -35,7 +34,8 @@ $(document).ready(function(){
 		entirerow2=entirerow2.concat('<td id="',td_id2,'" bgcolor="',backgroundstable[i],'" style="width:100px; height:100px; border:5px solid white;"></td>');
 	}
 	console.log(entirerow2);
-	document.getElementById("profile_background_choose").rows[0].innerHTML=entirerow2;*/
+	document.getElementById("profile_background_choose").rows[0].innerHTML=entirerow2;
+	*/
 	$(".show_edit").click(function() {
 		$(".show_edit").css("display", "none");
 		$(".hide_edit").css("display", "block");
@@ -80,7 +80,8 @@ $(document).ready(function(){
 				console.log(idx2);
 				$(".submit_profile_change").css("display", "block");
 			});
-		}*/
+		}
+		*/
 		
 	});
 	
@@ -88,16 +89,16 @@ $(document).ready(function(){
 		$(".show_edit").css("display", "block");
 		$(".hide_edit").css("display", "none");
 		$(".edit_profile").css("display", "none");
-		setTimeout(' window.location.href = "dashboard.php"; ',2000);
-		$("#edit-response").html('Refreshing...');
+		//setTimeout(' window.location.href = "dashboard.php"; ',2000);
+		//$("#edit-response").html('Refreshing...');
 	});
 	
 	$(".edit-profile").click(function() {
 		$(".show_edit").css("display", "block");
 		$(".hide_edit").css("display", "none");
 		$(".edit_profile").css("display", "none");
-		setTimeout(' window.location.href = "dashboard.php"; ',2000);
-		$("#edit-response").html('Refreshing...');
+		//setTimeout(' window.location.href = "dashboard.php"; ',2000);
+		//$("#edit-response").html('Refreshing...');
 	});
 	
 	$(".submit_profile_change").click(function(){
@@ -135,7 +136,7 @@ $(document).ready(function(){
 				
 			},
 			success : function(response){			
-				console.log(response);
+				console.log("In setting background");
 				$(document.body).css("backgroundColor",response);
 				//setTimeout(' window.location.href = "dashboard.php"; ',2000);
 			
@@ -156,9 +157,10 @@ $(document).ready(function(){
 			},
 			success : function(response){			
 				console.log(response);
+				$("#edit-response").html('Refreshing...');
+				setTimeout(' window.location.href = "dashboard.php"; ',2000);
 				//$(".profile_pic").attr('src', response);
-				$("#edit-response").html('Changes will be implemented after user manually hide edit profile section');
-				//setTimeout(' window.location.href = "dashboard.php"; ',2000);
+				
 			
 			}
 		});
