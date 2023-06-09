@@ -2,7 +2,7 @@
 $host = 'localhost';
 $user = 'root';
 $password = 'root';
-$database = 'projekt';
+$database = 'project';
 
 // Połączenie z bazą danych
 $conn = new mysqli($host, $user, $password, $database);
