@@ -11,32 +11,35 @@ if ($conn->connect_error) {
 }
 
 // Pobranie wartości przekazanej z formularza
-$category = $_GET['category'];
+$category = $_POST['category'];
 
 $category = $conn->real_escape_string($category);
 
 // Zapytanie SQL do pobrania gier na podstawie wybranej kategorii
-$sql = "SELECT gry.nazwa_gry, kategoria.nazwa
+$sql = "SELECT gry.nazwa_gry
 		FROM gry
 		INNER JOIN kategoria ON gry.id_kategoria = kategoria.id_kategoria
 		WHERE kategoria.id_kategoria = '$category'";
 
 $result = $conn->query($sql);
+
 if ($result === false) {
 	echo 'Błąd zapytania: ' . $conn->error;
 	exit;
 }
 
-if ($result->num_rows > 0) {
+	$resultset = array();
 	// Wyświetlenie wyników
-	while ($row = $result->fetch_assoc()) {
-		echo '<p>Nazwa gry: ' . $row['nazwa_gry'] . '</p>';
-		echo '<p>Kategoria: ' . $row['nazwa'] . '</p>';
+	while ($row = mysqli_fetch_assoc($result)) {
+		//echo '<p>Nazwa gry: ' . $row['nazwa_gry'] . '</p>';
+		//echo '<p>Kategoria: ' . $row['nazwa'] . '</p>';
+		$resultset[] = $row['nazwa_gry'];
 		// Wyświetlanie innych informacji o grze
 	}
-} else {
-	echo 'Brak wyników.';
-}
+
+	$resultset = json_encode($resultset);
+	echo $resultset;
+
 
 $conn->close();
 ?>

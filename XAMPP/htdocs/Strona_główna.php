@@ -9,7 +9,11 @@ include('newheader.php');
 		<button type="submit">Szukaj</button>
 	</form>
 
-	<div id="search-results"></div>
+	<div id="search-results">
+		<table id="printing2">
+			
+		</table>
+	</div>
 	<script src="kategoria.js"></script>	
 </body>
 </html>

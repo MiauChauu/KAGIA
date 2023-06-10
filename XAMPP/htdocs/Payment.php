@@ -9,6 +9,12 @@ include('newheader.php');
   </style>
 </head>
 <body>
+<script type="text/javascript" src="Payment.js"></script>
+<script>
+/*handling additional validation for purchase form*/
+
+
+</script>
   <h1>Credit Card Purchase</h1>
   
 <div id="purchase-div">
@@ -22,19 +28,19 @@ include('newheader.php');
     <label for="cvv">CVV:</label>
     <input type="text" id="cvv" name="cvv" ><br>
 
-    <input type="hidden" id="offer_id" name="offer_id" value="7">
+    <input type="hidden" id="offer_id" name="offer_id">
     
     <input type="submit" value="Purchase" id="purchase-submit" name="purchase-submit" class="btn-primary">
   </form>
 </div>
 
-<div id="purchase-div" style="display:block">
-  <p>Click on the censored field below to reveal your key:</p>
+<div id="key-div" style="display:none">
+  <p>And there you have it, your key:</p>
   <input type="text" id="keyField" value="">
 </div>
 
 
-  <div id="result"></div>
+  <div id="result"></div>	
 
 </body>
 </html>

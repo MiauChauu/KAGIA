@@ -120,12 +120,12 @@ class Employee {
 	function purchase() {
 		if(isset($_POST['purchase-submit'])) {
 			$offer_id = trim($_POST['offer_id']);
-			$sql = "SELECT klucz FROM oferty"; //WHERE id_oferty = '$offer_id'";
+			$sql = "SELECT klucz FROM oferty WHERE id_oferty = '$offer_id'";
 			$resultset = mysqli_query($this->conn, $sql) or die("database error:". mysqli_error($this->conn));
 			$row = mysqli_fetch_assoc($resultset);
 			$key = $row['klucz'];
-			//$sql2 = "DELETE FROM oferty WHERE id_oferty = '$offer_id'";
-			//$resultset2 = mysqli_query($this->conn, $sql2) or die("database error:". mysqli_error($this->conn));
+			$sql2 = "DELETE FROM oferty WHERE id_oferty = '$offer_id'";
+			$resultset2 = mysqli_query($this->conn, $sql2) or die("database error:". mysqli_error($this->conn));
 			echo "$key";
 		}
 	}
