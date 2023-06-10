@@ -8,13 +8,14 @@ if (isset($_SESSION['user_session'])) {
     //echo "Session variable is not set.";
 	header("Location: Strona_główna+logowanie.php");
 	exit;
+}
 	
 if (!isset($_SESSION['colorMode'])) {
     $_SESSION['colorMode'] = 'dark'; //domyślny tryb kolorów
 }
 
 $htmlClass = $_SESSION['colorMode'];
-}
+
 ?>
 <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
@@ -168,10 +169,12 @@ function DualFlipClassSwitch( TagName , Class1 , Class2 , MemoryName ) {
     .css">
 	<link href="styl_panelu.css" rel="stylesheet" type="text/css" />
 	<link href='http://fonts.googleapis.com/css?family=Lato:400,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'> <!tu chyba trzeba coś zmienić>
-	<script type="text/javascript" charset="utf8" src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.0.3.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.4.1/jquery-migrate.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/validatorjs@3.21.0/dist/validator.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="libs/common.js"></script>
+    <script type="text/javascript" src="jquery.validate.js"></script>
 
 	<!--
 	<script type="text/javascript" charset="utf8" src="libs/edit_profile.js"></script>
@@ -205,8 +208,7 @@ function DualFlipClassSwitch( TagName , Class1 , Class2 , MemoryName ) {
 				<li><a href="Strona_główna.php">Strona główna</a></li>
 				<li><a href="dodawanie_produktu.php">Dodanie produktu</a></li>
 				<li><a href="top10.php">Ranking gier</a></li>
-				<li><a href="dashboard.php">Edytuj profil</a></li>
-                <li><a href="#">Ustawienia</a></li>
+				<li><a href="dashboard.php">Edycja i ustawienia</a></li>
                 <li><a href="response.php?action=logout" class="btn btn-default btn-sm">Wyloguj</a></li>
 				<div style="float:left;" class="profile_pic_div">
 				<a href="p_użytkownika.php" class="btn btn-default btn-sm">

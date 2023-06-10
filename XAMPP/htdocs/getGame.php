@@ -17,6 +17,9 @@ switch($action) {
  case 'sendGame';
 	$empCls->sendGame();
  break;
+ case 'getOffer';
+	$empCls->getOffer();
+ break;
  default:
  return;
 }
@@ -81,10 +84,36 @@ class Infos{
 			//} else {
 			//	echo "Ohhh ! Wrong Credential."; // wrong details
 			//}
+			}
 		}
 	}
-	
-}
+
+	function getOffer() {
+		$gamename = trim($_POST['game']);
+		if($gamename==""){
+			echo "1";
+		} else {
+		$sql = "SELECT id_oferty,nazwa_gry,username,cena FROM oferty INNER JOIN gry ON oferty.id_gry = gry.id_gry INNER JOIN logowanie ON oferty.id_sprzedajacego = logowanie.id_uzytkownika WHERE nazwa_gry = '$gamename'";
+		$results = mysqli_query($this->conn, $sql) or die("database error:". mysqli_error($this->conn));
+		//$userData = mysql_fetch_array($results, MYSQL_ASSOC);
+
+		$resultset = array();
+		while ($row = mysqli_fetch_assoc($results)) {
+		$resultset[] = $row['id_oferty'];
+		$resultset[] = $row['nazwa_gry'];
+		$resultset[] = $row['username'];
+		$resultset[] = $row['cena'];
+		}
+
+		// $resultset now holds all rows from the first query.
+		//foreach ($resultset as $result){
+		//... etc...
+			
+		//$row = mysqli_fetch_assoc($resultset);
+		$resultset = json_encode($resultset);
+		echo $resultset;
+		}
+	}
 }
 ?>
 	

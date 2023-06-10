@@ -231,33 +231,44 @@ $(document).ready(function(){
 		return false;
 	}
 
+
+
 	/* handling purchase form validation */
 	$("#purchase-form").validate({
 		rules: {
-			cardNumber: {
-				required: true,
-			},
-			expiryDate: {
-				required: true,
-			},
-			cvv: {
-				required: true,
-			},
+		  cardNumber: {
+			required: true,
+			minlength:16,
+			maxlength:16,
+			
+		  },
+		  expiryDate: {
+			required: true,
+			
+		  },
+		  cvv: {
+			required: true,
+			
+		  }
 		},
 		messages: {
-			cardNumber:{
-				required: "Please enter your card number"
-			},
-			expiryDate: {
-				required: "Please enter expiry date of your card"
-			},
-			cvv: {
-				required: "Please enter cvv number"
-			},
-
+		  cardNumber: {
+			required: "Please enter your card number",
+			minlength: "16 digit number",
+			
+		  },
+		  expiryDate: {
+			required: "Please enter the expiry date of your card",
+			
+		  },
+		  cvv: {
+			required: "Please enter the CVV number",
+			
+		  }
 		},
-		submitHandler: submitPurchaseForm	
-	});	
+		submitHandler: submitPurchaseForm
+	  });
+	  
 
 	/* Handling purchase functionality */
 	function submitPurchaseForm() {		
@@ -279,8 +290,8 @@ $(document).ready(function(){
 					//setTimeout(' window.location.href = "p_użytkownika.php"; ',2000);
 				} else {									
 					console.log(response);
-					//$("#purchase-submit").html('Paying ...');
-					$("#purchase-div").css('display', 'block');
+					$("#purchase-submit").val('Payment Complete');
+					$("#key-div").css('display', 'block');
 					console.log($("#keyField").val());
 					$("#keyField").val(response);
 				}
