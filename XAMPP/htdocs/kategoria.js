@@ -15,6 +15,11 @@ $(document).ready(function() {
 							//$('#search-results').html(response);
 							console.log(response);
 							var table = document.getElementById("printing2");
+								if (table.children[0]) {
+									while(table.children[0]){
+									table.children[0].remove();
+									}
+								}
 							
 							// Loop through the data and generate table rows
 							var n=1;

@@ -1750,3 +1750,66 @@ recovered pages: 0% 13% 100% (0.0 seconds); tables to flush: 2 1 0
 2023-06-10 15:45:14 0 [Note] Plugin 'FEEDBACK' is disabled.
 2023-06-10 15:45:14 0 [Note] InnoDB: Loading buffer pool(s) from D:\K\KAGIA\XAMPP\mysql\data\ib_buffer_pool
 2023-06-10 15:45:14 0 [Note] Server socket created on IP: '::'.
+2023-06-10 17:36:50 0 [Note] Starting MariaDB 10.4.28-MariaDB source revision c8f2e9a5c0ac5905f28b050b7df5a9ffd914b7e7 as process 1812
+2023-06-10 17:36:50 0 [Note] mysqld.exe: Aria engine: starting recovery
+recovered pages: 0% 10% 20% 85% 100% (0.0 seconds); tables to flush: 14 13 12 11 10 9 8 7 6 5 4 3 2 1 0
+ (0.1 seconds); 
+2023-06-10 17:36:50 0 [Note] mysqld.exe: Aria engine: recovery done
+2023-06-10 17:36:50 0 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions
+2023-06-10 17:36:50 0 [Note] InnoDB: Uses event mutexes
+2023-06-10 17:36:50 0 [Note] InnoDB: Compressed tables use zlib 1.2.12
+2023-06-10 17:36:50 0 [Note] InnoDB: Number of pools: 1
+2023-06-10 17:36:50 0 [Note] InnoDB: Using SSE2 crc32 instructions
+2023-06-10 17:36:50 0 [Note] InnoDB: Initializing buffer pool, total size = 16M, instances = 1, chunk size = 16M
+2023-06-10 17:36:50 0 [Note] InnoDB: Completed initialization of buffer pool
+2023-06-10 17:36:50 0 [Note] InnoDB: Starting crash recovery from checkpoint LSN=3616456
+2023-06-10 17:36:51 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2023-06-10 17:36:51 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2023-06-10 17:36:51 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2023-06-10 17:36:51 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\projekt\gry.ibd' OS error: 203
+2023-06-10 17:36:51 0 [ERROR] InnoDB: Operating system error number 203 in a file operation.
+2023-06-10 17:36:51 0 [Note] InnoDB: Some operating system error numbers are described at https://mariadb.com/kb/en/library/operating-system-error-codes/
+2023-06-10 17:36:51 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``projekt`.`gry``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2023-06-10 17:36:51 0 [Warning] InnoDB: Ignoring tablespace for `projekt`.`gry` because it could not be opened.
+2023-06-10 17:36:51 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2023-06-10 17:36:51 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2023-06-10 17:36:51 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2023-06-10 17:36:51 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\projekt\kategoria.ibd' OS error: 203
+2023-06-10 17:36:51 0 [ERROR] InnoDB: Operating system error number 203 in a file operation.
+2023-06-10 17:36:51 0 [Note] InnoDB: Some operating system error numbers are described at https://mariadb.com/kb/en/library/operating-system-error-codes/
+2023-06-10 17:36:51 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``projekt`.`kategoria``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2023-06-10 17:36:51 0 [Warning] InnoDB: Ignoring tablespace for `projekt`.`kategoria` because it could not be opened.
+2023-06-10 17:36:51 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2023-06-10 17:36:51 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2023-06-10 17:36:51 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2023-06-10 17:36:51 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\projekt\logowanie.ibd' OS error: 203
+2023-06-10 17:36:51 0 [ERROR] InnoDB: Operating system error number 203 in a file operation.
+2023-06-10 17:36:51 0 [Note] InnoDB: Some operating system error numbers are described at https://mariadb.com/kb/en/library/operating-system-error-codes/
+2023-06-10 17:36:51 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``projekt`.`logowanie``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2023-06-10 17:36:51 0 [Warning] InnoDB: Ignoring tablespace for `projekt`.`logowanie` because it could not be opened.
+2023-06-10 17:36:51 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2023-06-10 17:36:51 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2023-06-10 17:36:51 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2023-06-10 17:36:51 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\projekt\oferty.ibd' OS error: 203
+2023-06-10 17:36:51 0 [ERROR] InnoDB: Operating system error number 203 in a file operation.
+2023-06-10 17:36:51 0 [Note] InnoDB: Some operating system error numbers are described at https://mariadb.com/kb/en/library/operating-system-error-codes/
+2023-06-10 17:36:51 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``projekt`.`oferty``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2023-06-10 17:36:51 0 [Warning] InnoDB: Ignoring tablespace for `projekt`.`oferty` because it could not be opened.
+2023-06-10 17:36:51 0 [ERROR] InnoDB: Operating system error number 3 in a file operation.
+2023-06-10 17:36:51 0 [ERROR] InnoDB: The error means the system cannot find the path specified.
+2023-06-10 17:36:51 0 [ERROR] InnoDB: If you are installing InnoDB, remember that you must create directories yourself, InnoDB does not create them.
+2023-06-10 17:36:51 0 [ERROR] InnoDB: Cannot open datafile for read-only: '.\projekt\pytania.ibd' OS error: 203
+2023-06-10 17:36:51 0 [ERROR] InnoDB: Operating system error number 203 in a file operation.
+2023-06-10 17:36:51 0 [Note] InnoDB: Some operating system error numbers are described at https://mariadb.com/kb/en/library/operating-system-error-codes/
+2023-06-10 17:36:51 0 [ERROR] InnoDB: Could not find a valid tablespace file for ``projekt`.`pytania``. Please refer to https://mariadb.com/kb/en/innodb-data-dictionary-troubleshooting/ for how to resolve the issue.
+2023-06-10 17:36:51 0 [Warning] InnoDB: Ignoring tablespace for `projekt`.`pytania` because it could not be opened.
+2023-06-10 17:36:51 0 [Note] InnoDB: 128 out of 128 rollback segments are active.
+2023-06-10 17:36:51 0 [Note] InnoDB: Removed temporary tablespace data file: "ibtmp1"
+2023-06-10 17:36:51 0 [Note] InnoDB: Creating shared tablespace for temporary tables
+2023-06-10 17:36:51 0 [Note] InnoDB: Setting file '\K\KAGIA\XAMPP\mysql\data\ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2023-06-10 17:36:51 0 [Note] InnoDB: File '\K\KAGIA\XAMPP\mysql\data\ibtmp1' size is now 12 MB.
+2023-06-10 17:36:51 0 [Note] InnoDB: Waiting for purge to start
+2023-06-10 17:36:51 0 [Note] InnoDB: 10.4.28 started; log sequence number 3616465; transaction id 4766
+2023-06-10 17:36:51 0 [Note] Plugin 'FEEDBACK' is disabled.
+2023-06-10 17:36:51 0 [Note] InnoDB: Loading buffer pool(s) from D:\K\KAGIA\XAMPP\mysql\data\ib_buffer_pool
+2023-06-10 17:36:51 0 [Note] Server socket created on IP: '::'.
