@@ -60,33 +60,12 @@ include('newheader.php');
 		
 		
 </div>
-</br></br>
-<body>
+</br></br></b>
+
     <div class="container2">
-        <h3>Oceń sprzedającego</h3>
+        <h3>Ocena sprzedającego</h3>
         <div class="star">
             <a href="#"
-            class="bi-star-fill">
-            <svg id = "svgelem" width = "300" height = "300" xmlns = "http://www.w3.org/2000/svg">
-                <polygon points="100,10 40,180 190,60 10,60 160,180"/>
-             </svg> </a>
-            <a href="#"
-            class="bi-star-fill"><svg id = "svgelem" width = "300" height = "300" xmlns = "http://www.w3.org/2000/svg">
-                <polygon points="100,10 40,180 190,60 10,60 160,180"/>
-             </svg></a>            
-            <a href="#"
-            class="bi-star-fill"><svg id = "svgelem" width = "300" height = "300" xmlns = "http://www.w3.org/2000/svg">
-                <polygon points="100,10 40,180 190,60 10,60 160,180"/>
-             </svg></a>            
-            <a href="#"
-            class="bi-star-fill"><svg id = "svgelem" width = "300" height = "300" xmlns = "http://www.w3.org/2000/svg">
-                <polygon points="100,10 40,180 190,60 10,60 160,180"/>
-             </svg></a>            
-            <a href="#"
-            class="bi-star-fill"><svg id = "svgelem" width = "300" height = "300" xmlns = "http://www.w3.org/2000/svg">
-                <polygon points="100,10 40,180 190,60 10,60 160,180"/>
-             </svg></a>
-             <a href="#"
             class="bi-star-fill">
             <svg id = "svgelem" width = "300" height = "300" xmlns = "http://www.w3.org/2000/svg">
                 <polygon points="100,10 40,180 190,60 10,60 160,180"/>
