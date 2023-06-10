@@ -27,6 +27,13 @@ html.white {
 body{
 	background-color:var(--background-color);
 }
+.promocjaGier{
+	background-color: #75172e;
+	height: 100px;
+	width: 600px;
+	color: #ffffff;
+	font-size: 30px;
+	}
 
 #h1{
 	background-color:var(--color-hover);

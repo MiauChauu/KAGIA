@@ -164,6 +164,8 @@ function DualFlipClassSwitch( TagName , Class1 , Class2 , MemoryName ) {
 	<title>Panel</title>
 	
 	<link rel="stylesheet" type="text/css" href="persona.css">
+    <link rel="stylesheet" href="bootstrap-icons/bootstrap-icons
+    .css">
 	<link href="styl_panelu.css" rel="stylesheet" type="text/css" />
 	<link href='http://fonts.googleapis.com/css?family=Lato:400,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'> <!tu chyba trzeba coś zmienić>
 	<script type="text/javascript" charset="utf8" src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.0.3.js"></script>

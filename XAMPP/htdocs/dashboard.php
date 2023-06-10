@@ -60,6 +60,72 @@ include('newheader.php');
 		
 		
 </div>
+</br></br>
+<body>
+    <div class="container2">
+        <h3>Oceń sprzedającego</h3>
+        <div class="star">
+            <a href="#"
+            class="bi-star-fill">
+            <svg id = "svgelem" width = "300" height = "300" xmlns = "http://www.w3.org/2000/svg">
+                <polygon points="100,10 40,180 190,60 10,60 160,180"/>
+             </svg> </a>
+            <a href="#"
+            class="bi-star-fill"><svg id = "svgelem" width = "300" height = "300" xmlns = "http://www.w3.org/2000/svg">
+                <polygon points="100,10 40,180 190,60 10,60 160,180"/>
+             </svg></a>            
+            <a href="#"
+            class="bi-star-fill"><svg id = "svgelem" width = "300" height = "300" xmlns = "http://www.w3.org/2000/svg">
+                <polygon points="100,10 40,180 190,60 10,60 160,180"/>
+             </svg></a>            
+            <a href="#"
+            class="bi-star-fill"><svg id = "svgelem" width = "300" height = "300" xmlns = "http://www.w3.org/2000/svg">
+                <polygon points="100,10 40,180 190,60 10,60 160,180"/>
+             </svg></a>            
+            <a href="#"
+            class="bi-star-fill"><svg id = "svgelem" width = "300" height = "300" xmlns = "http://www.w3.org/2000/svg">
+                <polygon points="100,10 40,180 190,60 10,60 160,180"/>
+             </svg></a>
+             <a href="#"
+            class="bi-star-fill">
+            <svg id = "svgelem" width = "300" height = "300" xmlns = "http://www.w3.org/2000/svg">
+                <polygon points="100,10 40,180 190,60 10,60 160,180"/>
+             </svg> </a>
+            <a href="#"
+            class="bi-star-fill"><svg id = "svgelem" width = "300" height = "300" xmlns = "http://www.w3.org/2000/svg">
+                <polygon points="100,10 40,180 190,60 10,60 160,180"/>
+             </svg></a>            
+            <a href="#"
+            class="bi-star-fill"><svg id = "svgelem" width = "300" height = "300" xmlns = "http://www.w3.org/2000/svg">
+                <polygon points="100,10 40,180 190,60 10,60 160,180"/>
+             </svg></a>            
+            <a href="#"
+            class="bi-star-fill"><svg id = "svgelem" width = "300" height = "300" xmlns = "http://www.w3.org/2000/svg">
+                <polygon points="100,10 40,180 190,60 10,60 160,180"/>
+             </svg></a>            
+            <a href="#"
+            class="bi-star-fill"><svg id = "svgelem" width = "300" height = "300" xmlns = "http://www.w3.org/2000/svg">
+                <polygon points="100,10 40,180 190,60 10,60 160,180"/>
+             </svg></a>
+        </div>
+    </div>
+
+    <script>
+        var stars = document.querySelectorAll('.star a');
+        stars.forEach(
+            (item, index1) => {
+                item.addEventListener('click', 
+                    () => {
+                        stars.forEach(
+                            (star, index2) => {
+                                index1 >= index2 ? star.classList.add('active') : star.classList.remove('active');
+                            }
+                        )
+                    }
+                )
+            }
+        )
+    </script>
 <?php
 include('partials/footer.php')
 ?>

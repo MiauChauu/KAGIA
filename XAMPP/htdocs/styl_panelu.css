@@ -137,3 +137,10 @@ ol > li > ul > li:hover > a
 {
 	color: var(--color-hover);
 }
+.promocjaGier{
+	background-color: #75172e;
+	height: 100px;
+	width: 600px;
+	color: #ffffff;
+	font-size: 30px;
+	}
