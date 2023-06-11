@@ -34,11 +34,23 @@ include('newheader.php');
   </form>
 </div>
 
+<!--<div id="mail-div" style="display:block">
+  <p>Wpisz swój email żeby otrzymać klucz: </p>
+  <form id="mail-form" action="send_mail.php" method="post">
+  <input type="text" id="mailField" name="mailField" value=""><br>
+  <input type="submit" value="Wyślij" id="mail-submit" name="mail-submit" class="btn-primary">
+  <input type="hidden" id="userField" name="userField">
+  <div id="key-div" style="display:none">
+  <p>And there you have it, your key: </p>
+  <input type="hidden" id="keyField" value="">
+</div>
+</form>
+</div>-->
+
 <div id="key-div" style="display:none">
-  <p>And there you have it, your key:</p>
+  <p>And there you have it, your key: </p>
   <input type="text" id="keyField" value="">
 </div>
-
 
   <div id="result"></div>	
 
